@@ -12,7 +12,7 @@
 
 #Standard
 
-NAME		=	libft.a
+NAME		=	../libft.a
 INCLUDES	=	includes
 SRCS_DIR 	=	src/
 OBJS_DIR	=	obj/
