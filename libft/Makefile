@@ -13,7 +13,7 @@
 #Standard
 
 NAME		=	libft.a
-INCLUDES	=	../include
+INCLUDES	=	includes
 SRCS_DIR 	=	src/
 OBJS_DIR	=	obj/
 CC			=	gcc
@@ -56,12 +56,17 @@ FTLST_DIR	=	ft_lst/
 FTLST		=	ft_lstadd_back ft_lstadd_front ft_lstclear ft_lstdelone \
 				ft_lstiter ft_lstlast ft_lstmap ft_lstnew ft_lstsize
 
+FTPTF_DIR	=	ft_printf/
+FTPTF		=	ft_hex_handler ft_int_handler ft_pointer_handler \
+				ft_print_handlers ft_printf
+
 SRC_FILES+=$(addprefix $(FTIS_DIR),$(FTIS))
 SRC_FILES+=$(addprefix $(FTMEM_DIR),$(FTMEM))
 SRC_FILES+=$(addprefix $(FTPUT_DIR),$(FTPUT))
 SRC_FILES+=$(addprefix $(FTTO_DIR),$(FTTO))
 SRC_FILES+=$(addprefix $(FTSTR_DIR),$(FTSTR))
 SRC_FILES+=$(addprefix $(FTLST_DIR),$(FTLST))
+SRC_FILES += $(addprefix $(FTPTF_DIR), $(FTPTF))
 
 SRCS 		= 	$(addprefix $(SRCS_DIR), $(addsuffix .c, $(SRC_FILES)))
 OBJS 		= 	$(addprefix $(OBJS_DIR), $(addsuffix .o, $(SRC_FILES)))
@@ -89,6 +94,7 @@ $(OBJSF):
 			@mkdir -p $(OBJS_DIR)$(FTTO_DIR)
 			@mkdir -p $(OBJS_DIR)$(FTSTR_DIR)
 			@mkdir -p $(OBJS_DIR)$(FTLST_DIR)
+			@mkdir -p $(OBJS_DIR)$(FTPTF_DIR)
 
 clean:
 			@$(RM) -rf $(OBJS_DIR)

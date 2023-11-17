@@ -4,9 +4,7 @@
 
 // the function returns the total amount of "written" characters
 
-#include "ft_printf.h"
 #include "libft.h"
-#include <limits.h>
 
 int	ft_hex_len(unsigned	long num)
 {

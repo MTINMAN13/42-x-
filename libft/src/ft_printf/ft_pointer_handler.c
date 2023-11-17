@@ -1,9 +1,7 @@
 // the function returns the amount of printed characters
 // the function prints the pointer to passed argument
 
-#include "ft_printf.h"
 #include "libft.h"
-#include <limits.h>
 
 int	ft_handle_x_ptr(unsigned long long num)
 {
